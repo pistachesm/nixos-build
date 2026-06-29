@@ -2,7 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    neovim
     wget
     curl
     tree
@@ -17,8 +16,9 @@
     clinfo
     brightnessctl
     bubblewrap
-    codex
     nvme-cli
 	openssh
+	lm_sensors
+	wayland
   ];
 }

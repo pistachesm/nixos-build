@@ -1,31 +1,43 @@
-{ config, ... }:
+{ ... }:
 
 {
-
   programs.fastfetch = {
     enable = true;
     settings = {
-      logo ={
+      logo = {
         source = "nixos_small";
-        padding.right = 1;
+        padding.right = 4;
       };
       display = {
-        size = {
-          binaryPrefix = "si";
-        };
+        separator = "  ";
+        size.binaryPrefix = "si";
       };
-      modules =[
+      modules = [
+        "title"
+        "separator"
         {
-	  type = "datetime";
-	  key = "Date";
-	  format = "{1}-{3}-{11}";
-	}
-	
-	"break"
-	"player"
-        "media"
+          type = "kernel";
+          key = "Kernel";
+        }
+        {
+          type = "packages";
+          key = "Packages";
+        }
+        {
+          type = "cpu";
+          key = "CPU";
+          format = "{name} ({cores-physical}C/{cores-logical}T) @ {freq-max}";
+        }
+		{
+          type = "memory";
+          key = "Memory";
+		}
+        {
+          type = "disk";
+          key = "Disk";
+          folders = "/";
+        }
       ];
     };
   };
-
 }
