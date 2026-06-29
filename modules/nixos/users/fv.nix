@@ -9,18 +9,15 @@
       "video"
       "audio"
       "input"
+	  "git"
     ];
   };
 
   security.sudo.extraRules = [
     {
       users = [ "fv" ];
-      commands = [
-        {
-          command = "/run/current-system/sw/bin/nixos-rebuild";
-          options = [ "NOPASSWD" ];
-        }
-      ];
+      #commands = [
+      #];
     }
   ];
 }

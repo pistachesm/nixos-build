@@ -19,5 +19,6 @@
     bubblewrap
     codex
     nvme-cli
+	openssh
   ];
 }
