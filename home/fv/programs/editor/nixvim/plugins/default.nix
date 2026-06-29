@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+
+  imports = [
+    ./lualine.nix
+  ];
+
+}
