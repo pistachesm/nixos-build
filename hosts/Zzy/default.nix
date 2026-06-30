@@ -1,4 +1,4 @@
-{ ... }:
+{ moduleArgs, inputs, ... }:
 
 {
   imports = [
@@ -9,7 +9,7 @@
     ../../modules/nixos/core
     ../../modules/nixos/desktop
     ../../modules/nixos/networking
-    ../../modules/nixos/programs/codex-desktop.nix
+    ../../modules/nixos/programs
     ../../modules/nixos/services
     ../../modules/nixos/users
   ];

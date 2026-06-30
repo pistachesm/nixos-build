@@ -373,6 +373,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
     Mod+W hotkey-overlay-title="Open a Browser: Firefox" { spawn "firefox"; }
     Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+Shift+R hotkey-overlay-title="Run an Application as Root: fuzzel" { spawn "fuzzel" "--launch-prefix=run-gui-as-root" "--prompt=Root> "; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
