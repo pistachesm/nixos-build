@@ -19,7 +19,5 @@
     nvme-cli
 	openssh
 	lm_sensors
-	wayland
-	codex
   ];
 }
