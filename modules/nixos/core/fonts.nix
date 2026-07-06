@@ -18,6 +18,7 @@
 	};
 	packages = with pkgs; [
       corefonts
+	  unifont
   	  dejavu_fonts
 	  noto-fonts
 	  noto-fonts-cjk-sans
@@ -28,6 +29,8 @@
 	  font-awesome
 	  ubuntu-classic
 	  proggyfonts
+	  material-icons
+	  nerd-fonts.hack
 	  nerd-fonts.symbols-only
 	  nerd-fonts.fira-code
 	  nerd-fonts.fira-mono

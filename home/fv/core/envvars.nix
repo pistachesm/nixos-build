@@ -1,7 +1,15 @@
 { ... }:
 
 {
-  home.sessionVariables = {
-    NIX_TEST = "funciona";
+  
+  home = { 
+
+    sessionVariables = {
+      NIX_TEST = "funciona";
+    };
+
+	sessionPath = [ "$HOME/.local/bin" ];
+  
   };
+
 }

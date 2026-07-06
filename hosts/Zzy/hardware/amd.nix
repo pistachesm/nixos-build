@@ -12,7 +12,11 @@
     amdgpu = {
       initrd.enable = true;
       opencl.enable = true;
-    };
+      overdrive = {
+        enable = true;
+		ppfeaturemask = "0xfff7ffff";
+	  };
+	};
 
     graphics = {
       enable = true;

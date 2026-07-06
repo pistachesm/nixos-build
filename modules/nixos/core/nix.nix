@@ -7,6 +7,7 @@
         "codex-desktop-nixos"
         "codex-desktop-nixos-local"
         "vscode"
+		"corefonts"
       ];
     };
 

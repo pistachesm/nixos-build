@@ -13,10 +13,10 @@
         "rtsx_pci_sdmmc"
         "thunderbolt"
       ];
-      kernelModules = [ "amdgpu" ];
+      kernelModules = [ "amdgpu" "ideapad_laptop" ];
     };
 
-    kernelModules = [ "kvm-amd" "ideapad_laptop" ];
+    kernelModules = [ "kvm-amd" ];
     extraModulePackages = [];
   };
 }
