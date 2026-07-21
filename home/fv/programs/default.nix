@@ -7,6 +7,8 @@
     ./browser/w3m.nix
     ./terminal/kitty.nix
     ./bat.nix
+	./lf.nix
+	./btop.nix 
     ./eza.nix
     ./fuzzel.nix
     ./git.nix

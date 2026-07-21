@@ -5,8 +5,6 @@
     wget
     curl
     tree
-    lf
-    btop
     coreutils
     e2fsprogs
     dosfstools

@@ -36,6 +36,7 @@
 	  nerd-fonts.fira-mono
 	  nerd-fonts.droid-sans-mono
 	  nerd-fonts.jetbrains-mono
+	  nerd-fonts.arimo
     ];
   };
 }
