@@ -16,9 +16,8 @@
       noPreference = "Square";
     };
 	font = {
-	  package = [ pkgs.nerd-fonts.arimo ];
 	  name = "Arimo Nerd Font";
-	  size = 12;
+	  size = 11;
 	};
   };
 }
