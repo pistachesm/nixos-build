@@ -2,7 +2,15 @@
 
 {
   home.packages = with pkgs; [
-    nodejs_24
-    cht-sh
+    
+	# Lenguage nodejs.
+	nodejs_24
+    
+	#Cheat sheet for commands.
+	cht-sh
+	
+	# Document viewer.
+	zathura
+  
   ];
 }

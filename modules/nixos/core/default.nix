@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -6,5 +6,6 @@
     ./nix.nix
     ./packages.nix
 	./fonts.nix
+	./cachix.nix
   ];
 }
