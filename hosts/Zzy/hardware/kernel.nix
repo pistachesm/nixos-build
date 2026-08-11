@@ -7,6 +7,7 @@
       "amd_pstate=active"
       "rootfstype=ext4"
       "amdgpu.dpm=1"
+	  "psmouse.synaptics_intertouch=0"
     ];
   };
 }

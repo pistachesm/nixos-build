@@ -3,6 +3,7 @@
 {
   imports = [
     ./niri
-	#./portal.nix
+	./portal.nix
+    ./wayland.nix
   ];
 }

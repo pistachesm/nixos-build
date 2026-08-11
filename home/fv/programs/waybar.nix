@@ -13,12 +13,13 @@
 		modules-left = [ "cpu" "memory" "temperature" ];
 	    "cpu" = {
 		  interval = 10;
-          format = " {}%";
-          max-length = 10;
+          format = " {icon} {}%";
+          format-icons = " ";
+		  max-length = 10;
 		};
 		"memory" = {
 		  interval = 30;
-          format = "   {}%";
+          format = " {}%";
           format-alt = "   {used:0.1f}GB/{total:0.1f}GB";
     	  tooltip = true;
  	      tooltip-format = "RAM: {percentage}%\nUsada: {used:0.1f}GB\nLibre: {avail:0.1f}GB";
@@ -28,24 +29,27 @@
 		];
 		modules-right = [ "network" "pulseaudio" "backlight" "battery" "clock" ];
 	    "clock" = { 
-		  "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"; 
+		  tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"; 
 		};
 		"network" = {
- 		  "format" = "{ifname}";
-          "format-ethernet" = " {ifname}";
-          "format-wifi" = " {essid} ({signalStrength}%)";
-          "format-disconnected" = " Disconnected";
-          "tooltip-format" = "{ifname} via {gwaddr}";
-          "tooltip-format-wifi" = "{essid} ({signalStrength}%) ";
-          "tooltip-format-ethernet" = " {ifname}";
+ 		  format = "{icon}  {ifname}";
+          format-ethernet = "   {ifname}";
+          format-wifi = "   {essid} ({signalStrength}%)";
+          format-disconnected = "  Disconnected";
+          tooltip-format = "{ifname} via {gwaddr}";
+          tooltip-format-wifi = "{essid} ({signalStrength}%) ";
+          tooltip-format-ethernet = "{ } {ifname}";
+		  format-icons = {
+    	    wifi = " ";
+		  };
 		};
 		"pulseaudio" = {
   	      format = "{icon} {volume}%";
 	      format-bluetooth = "{icon} {volume}% ";
 	      format-muted = " Muted";
  	      format-icons = {
-		    headphone = "";
-     		default = ["" ""];
+		    headphone = " ";
+     		default = " "; 
     	  };
     	  scroll-step = 5;
 		};
