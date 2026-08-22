@@ -5,7 +5,7 @@
     enableRedistributableFirmware = true;
 
     cpu.amd = {
-      ryzen-smu.enable = true;
+      # ryzen-smu.enable = true;
       updateMicrocode = true;
     };
 

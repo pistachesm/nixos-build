@@ -19,6 +19,6 @@
     kernelModules = [ "kvm-amd" ];
     extraModulePackages = [];
 
-	blacklistedKernelModules = [ "elan_i2c" ];
+	blacklistedKernelModules = [];
   };
 }

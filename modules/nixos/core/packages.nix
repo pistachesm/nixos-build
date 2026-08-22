@@ -17,5 +17,8 @@
     nvme-cli
 	openssh
 	lm_sensors
+	nvtopPackages.amd
+	vulkan-tools
+	mesa-demos
   ];
 }
