@@ -10,11 +10,14 @@
 	./lf.nix
 	./btop.nix 
     ./eza.nix
-    ./fuzzel.nix
+    # Replaced temporarily by DankMaterialShell
+    # ./fuzzel.nix
     ./git.nix
     ./nix-index.nix
     ./fastfetch.nix
-    ./waybar.nix
+    # Replaced temporarily by DankMaterialShell
+    # ./waybar.nix
+	./ripgrep.nix
     ./editor/nixvim
     ./editor/VScode.nix
   ];

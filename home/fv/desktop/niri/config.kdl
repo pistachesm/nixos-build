@@ -273,8 +273,16 @@ gestures {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-// This line starts waybar, a commonly used bar for Wayland compositors.
-  spawn-at-startup "waybar"
+// DMS is started by its graphical-session.target user service.
+
+// Niri launches and supervises the Xwayland compatibility server and exports DISPLAY.
+xwayland-satellite {
+    path "@XWAYLAND_SATELLITE@"
+}
+
+environment {
+    NIXOS_OZONE_WL "1"
+}
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -372,7 +380,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
     Mod+W hotkey-overlay-title="Open a Browser: Firefox" { spawn "firefox"; }
-    Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+R hotkey-overlay-title="Application launcher: DMS" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.

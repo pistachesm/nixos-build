@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   services.greetd = {
@@ -6,7 +6,7 @@
 
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --cmd niri-session";
+        command = "${pkgs.tuigreet}/bin/tuigreet --cmd '${lib.getExe config.programs.uwsm.package} start -- ${config.programs.niri.package}/bin/niri-session'";
         user = "greeter";
       };
     };
