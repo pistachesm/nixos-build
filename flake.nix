@@ -15,10 +15,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Keep niri-flake's tested nixpkgs: current nixos-unstable removed
-    # libdisplay-info_0_2 before niri-flake's package definition adapted.
-    niri.url = "github:sodiboo/niri-flake";
-
     codex-desktop-nixos.url = "github:mwmdev/codex-desktop-nixos";
   
     nixvim = {
@@ -27,7 +23,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nixos-hardware, home-manager, nix-index-database, codex-desktop-nixos, nixvim, niri, ... }:
+  outputs = inputs@{ self, nixpkgs, nixos-hardware, home-manager, nix-index-database, codex-desktop-nixos, nixvim, ... }:
     let
       system = "x86_64-linux";
     in {
@@ -38,9 +34,7 @@
         modules = [
           ./hosts/Zzy
 
-          niri.nixosModules.niri
-
-	  nixos-hardware.nixosModules.lenovo-ideapad-slim-5
+     	  nixos-hardware.nixosModules.lenovo-ideapad-slim-5
 
           home-manager.nixosModules.home-manager
           {
@@ -56,10 +50,10 @@
               backupFileExtension = "backup";
             };
           }
-
-	  codex-desktop-nixos.nixosModules.default
-
-        ];
+        
+		  codex-desktop-nixos.nixosModules.default
+        
+		];
       };
     };
 }

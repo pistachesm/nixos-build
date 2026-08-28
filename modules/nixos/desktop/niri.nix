@@ -1,16 +1,22 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+  
+  systemd.user.services.polkit-gnome-authentication-agent-1 = {
+    description = "Polkit GNOME authentication agent";
+    wantedBy = [ "graphical-session.target" ];
+	after = [ "graphical-session.target" ];
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+      Restart = "on-failure";
+    };
 
-  niri-flake.cache.enable = true;
+  security.polkit.enable = true;
 
   programs.niri = {
     enable = true;
-    # Use the exact cached output. The overlay's pkgs.niri-unstable currently
-    # trips over libdisplay-info_0_2 being removed from this newer nixpkgs.
     package = inputs.niri.packages.${pkgs.stdenv.hostPlatform.system}.niri-unstable;
   };
 
-  # niri-flake enables polkit and provides its session-aware KDE agent.
 }

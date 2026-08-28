@@ -273,12 +273,10 @@ gestures {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-// DMS is started by its graphical-session.target user service.
+spawn-at-startup "waybar"
 
-// Niri launches and supervises the Xwayland compatibility server and exports DISPLAY.
-xwayland-satellite {
-    path "@XWAYLAND_SATELLITE@"
-}
+
+// This are the environment variables chained to the session of niri itself
 
 environment {
     NIXOS_OZONE_WL "1"
@@ -380,7 +378,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: Kitty" { spawn "kitty"; }
     Mod+W hotkey-overlay-title="Open a Browser: Firefox" { spawn "firefox"; }
-    Mod+R hotkey-overlay-title="Application launcher: DMS" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    Mod+R hotkey-overlay-title="Application launcher: DMS" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.

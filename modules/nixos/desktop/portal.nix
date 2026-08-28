@@ -3,9 +3,10 @@
 {
   xdg.portal = {
     enable = true;
-    # Niri supplies its portal preference and GNOME screencast backend.
-    extraPortals = with pkgs; [
+    wlr.enable = true;
+	extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
     ];
   };
 }
