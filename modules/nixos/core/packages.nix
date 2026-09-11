@@ -6,6 +6,7 @@
     curl
     tree
     coreutils
+	coreboot-utils
     e2fsprogs
     dosfstools
     efibootmgr
