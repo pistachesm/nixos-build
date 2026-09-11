@@ -9,7 +9,8 @@
         "codex-desktop-nixos-local"
         "vscode"
 		"corefonts"
-      ];
+        "unrar"
+	  ];
     };
 
   nix.settings.experimental-features = [

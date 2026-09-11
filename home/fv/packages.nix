@@ -11,6 +11,11 @@
 	
 	# Document viewer.
 	zathura
+    
+	# Utilities.
+	p7zip
+	unzip
+	unrar
   
   ];
 }
