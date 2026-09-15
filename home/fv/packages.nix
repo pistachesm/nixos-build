@@ -16,6 +16,8 @@
 	p7zip
 	unzip
 	unrar
-  
+    
+	libsForQt5.qt5ct
+
   ];
 }

@@ -21,6 +21,7 @@
     ./zoxide.nix
 	./ripgrep.nix
 	./fd.nix
+	./obsidian.nix
   ];
 
 }

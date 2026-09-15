@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ config, pkgs, lib, ... }:
 
 {
 
@@ -10,6 +10,7 @@
         "vscode"
 		"corefonts"
         "unrar"
+		"obsidian"
 	  ];
     };
 
