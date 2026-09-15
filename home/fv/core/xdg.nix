@@ -4,7 +4,6 @@
   
   xdg = {
     enable = true;
-	createDirectories = true;
 	localBinInPath = true;
 	cacheHome = "${config.home.homeDirectory}/.cache";
 	dataHome = "${config.home.homeDirectory}/.local/share";
@@ -13,6 +12,7 @@
 	binHome = "${config.home.homeDirectory}/.local/bin";
 	userDirs = {
       enable = true;
+	  createDirectories = true;
 	  documents = "${config.home.homeDirectory}/Files";
 	  desktop = "${config.home.homeDirectory}/Files/Desktop";
 	  download = "${config.home.homeDirectory}/Downloads";
@@ -24,5 +24,8 @@
 	  templates = null;
 	};
   };
+
+  systemd.user.tmpfiles.rules = [ "d %h/.local/bin 0700 - - -" ];
+
 
 }

@@ -12,8 +12,6 @@
 	  VISUAL = "nvim";
 	};
 
-	sessionPath = [ "$HOME/.local/bin" ];
-  
   };
 
 }
