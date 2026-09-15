@@ -6,5 +6,6 @@
     ./file-systems.nix
     ./kernel.nix
     ./modules.nix
+	./power.nix
   ];
 }
