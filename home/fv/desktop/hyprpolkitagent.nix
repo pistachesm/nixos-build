@@ -2,14 +2,21 @@
 
 {
 
-  home.packages = with pkgs; [ hyprpolkitagent ];
 
-  systemd.user.services = {
-    polkit-kde-authentication-agent-1 = {
-      description = " hyprpolkitagent ";
-      wantedBy = [ "graphical-session.target" ];
-  	  after = [ "graphical-session.target" ];
-      serviceConfig = {
+  services.hyprpolkitagent = {
+    enable = true;
+  };
+
+  systemd.user.services.hyprpolkitagent = {
+	  Unit = {
+        Description = "Hyprland PolicyKit Agent";
+        Wants = [ "graphical-session.target" ];
+  	    After = [ "graphical-session.target" ];
+	  };
+	  Install = {
+	    WantedBy = [ "graphical-session.target" ];
+	  };
+      Service = {
         Type = "simple";
         ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
         Restart = "on-failure";
@@ -17,7 +24,5 @@
 		TimeoutStopSec = 10;
 	  };
     };
-    niri.enableDefaultPath = false;
-  };
 
 }

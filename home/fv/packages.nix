@@ -17,7 +17,10 @@
 	unzip
 	unrar
     
+	# Libraries.
 	libsForQt5.qt5ct
 
+    # Messaging CLient.
+	ferdium
   ];
 }
