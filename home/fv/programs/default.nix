@@ -19,7 +19,6 @@
     ./editor/nixvim
     ./editor/VScode.nix
     ./zoxide.nix
-	./ripgrep.nix
 	./fd.nix
 	./obsidian.nix
   ];
