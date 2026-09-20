@@ -4,10 +4,10 @@
   
   services.greetd = {
     enable = true;
-    useTextgReeter = true; 
+    useTextGreeter = true; 
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --cmd uwsm start default";
+        command = "${pkgs.tuigreet}/bin/tuigreet --cmd uwsm start niri --session";
         user = "greeter";	
       };
     };

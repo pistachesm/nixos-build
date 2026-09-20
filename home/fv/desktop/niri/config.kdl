@@ -274,15 +274,15 @@ gestures {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
- spawn-at-startup "uwsm" "finalize"
+// spawn-at-startup "uwsm" "finalize"
 
 // This are the environment variables chained to the session of niri itself
 
-environment {
-    NIXOS_OZONE_WL "1"
-	WAYLAND_DISPLAY "wayland-1"
-	DISPLAY ":0"
-}
+//environment {
+//    NIXOS_OZONE_WL "1"
+//	WAYLAND_DISPLAY "wayland-1"
+//	DISPLAY ":0"
+//}
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
