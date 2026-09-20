@@ -8,6 +8,7 @@
     ../../modules/nixos/boot
     ../../modules/nixos/core
     ../../modules/nixos/desktop
+    ../../modules/nixos/multimedia
     ../../modules/nixos/networking
     ../../modules/nixos/programs
     ../../modules/nixos/services

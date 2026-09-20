@@ -4,15 +4,13 @@
   
   services.greetd = {
     enable = true;
-
+    useTextgReeter = true; 
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --cmd niri-session";
-        user = "greeter";
+        command = "${pkgs.tuigreet}/bin/tuigreet --cmd uwsm start default";
+        user = "greeter";	
       };
     };
   };
-  
-  systemd.user.services.niri.enableDefaultPath = false;
 
 }

@@ -13,7 +13,7 @@ input {
             // For more information, see xkeyboard-config(7).
 
             // For example:
-             layout "latam"
+            // layout "us,ru"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
 
             // If this section is empty, niri will fetch xkb settings
@@ -30,16 +30,16 @@ input {
     // All commented-out settings here are examples, not defaults.
     touchpad {
         // off
-         tap
+        tap
         // dwt
         // dwtp
         // drag false
         // drag-lock
-         natural-scroll
+        natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
-		// pinch-sensitivity 1.0
-         scroll-method "two-finger"
+        // pinch-sensitivity 1.0
+        // scroll-method "two-finger"
         // disabled-on-external-mouse
     }
 
@@ -86,10 +86,10 @@ input {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1200@60"
+    mode "1920x1080@120.030"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1
+    scale 2
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -104,7 +104,7 @@ input {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=0 y=0
+    position x=1280 y=0
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -263,46 +263,33 @@ layout {
     }
 }
 
-
-gestures {
-	hot-corners {
-	    off
-	}
-}
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
- spawn-at-startup "uwsm" "finalize"
-
-// This are the environment variables chained to the session of niri itself
-
-environment {
-    NIXOS_OZONE_WL "1"
-	WAYLAND_DISPLAY "wayland-1"
-	DISPLAY ":0"
-}
+// This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-at-startup "waybar"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
-  hotkey-overlay {
+hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     // skip-at-startup
-  }
+}
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
- prefer-no-csd
+// prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
- screenshot-path "~/Media/Images/screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 // You can also set this to null to disable saving screenshots to disk.
 // screenshot-path null
@@ -314,7 +301,7 @@ animations {
     // Uncomment to turn off all animations.
     // off
 
-    // Slow down all animations by this factory. Values below 1 speed them up instead.
+    // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 3.0
 }
 
@@ -330,8 +317,6 @@ window-rule {
     // You can get away with just app-id="wezterm" if you want.
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
-    geometry-corner-radius 5
-    clip-to-geometry true
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
@@ -378,10 +363,9 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return hotkey-overlay-title="Open a Terminal: Kitty" { spawn "uwsm app -- kitty"; }
-    Mod+W hotkey-overlay-title="Open a Browser: Firefox" { spawn "uwsm app -- firefox"; }
-    Mod+R hotkey-overlay-title="Application launcher: DMS" { spawn "fuzzel"; }
-    // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -400,6 +384,7 @@ binds {
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
     XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioPause       allow-when-locked=true { spawn-sh "playerctl play-pause"; }
     XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
@@ -568,12 +553,12 @@ binds {
     Mod+Period { expel-window-from-column; }
 
     // Cycle through widths set in preset-column-widths.
-    Mod+D { switch-preset-column-width; }
+    Mod+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
-    Mod+Shift+D { switch-preset-column-width-back; }
+    Mod+Shift+R { switch-preset-column-width-back; }
 
-    Mod+Ctrl+Shift+D { switch-preset-window-height; }
-    Mod+Ctrl+D { reset-window-height; }
+    Mod+Ctrl+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
 
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
@@ -615,7 +600,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+T { toggle-column-tabbed-display; }
+    Mod+W { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have

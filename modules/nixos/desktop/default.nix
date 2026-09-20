@@ -4,7 +4,8 @@
   imports = [
     ./greetd.nix
     ./niri.nix
-    ./portal.nix
+    #./portal.nix
     ./polkit.nix
+    ./uwsm.nix
   ];
 }

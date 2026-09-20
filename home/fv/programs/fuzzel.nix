@@ -6,7 +6,8 @@
     enable = true;
 	settings = {
       main = {
-	    terminal = "${pkgs.kitty}/bin/kitty";
+	    launch-prefix = "uwsm app --";
+		terminal = "${pkgs.kitty}/bin/kitty";
 		layer = "overlay";
 	  };
 	};
