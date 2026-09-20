@@ -16,9 +16,11 @@
 	p7zip
 	unzip
 	unrar
+	playerctl
     
 	# Libraries.
 	libsForQt5.qt5ct
+	libnotify
 
     # Messaging CLient.
 	ferdium

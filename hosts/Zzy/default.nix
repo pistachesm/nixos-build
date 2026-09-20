@@ -1,4 +1,4 @@
-{ moduleArgs, inputs, ... }:
+{ ... }:
 
 {
   imports = [

@@ -21,5 +21,15 @@
 	nvtopPackages.amd
 	vulkan-tools
 	mesa-demos
+	util-linux
+
+	inotify-tools
+
+	# libnewt Library.
+	newt
+
+	# Python Library.
+	python314Packages.pyxdg
+	python314Packages.dbus-python
   ];
 }

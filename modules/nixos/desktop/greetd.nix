@@ -7,8 +7,10 @@
     useTextGreeter = true; 
     settings = {
       default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --cmd uwsm start niri --session";
-        user = "greeter";	
+        command = "${pkgs.tuigreet}/bin/tuigreet "
+		+ "--cmd 'uwsm start -F -- /run/current-system/sw/bin/niri --session'";
+        
+		user = "greeter";	
       };
     };
   };

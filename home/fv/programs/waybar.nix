@@ -4,7 +4,8 @@
 
   programs.waybar = {
     enable = true;
-    settings = [
+    systemd.enable = true;
+	settings = [
       {
 		layer = "top";
 		position = "top";
@@ -25,7 +26,8 @@
  	      tooltip-format = "RAM: {percentage}%\nUsada: {used:0.1f}GB\nLibre: {avail:0.1f}GB";
 		};
 		modules-center = [
-		  "sway/window"
+		  "niri/workspaces"
+		  "niri/window"
 		];
 		modules-right = [ "network" "pulseaudio" "backlight" "battery" "clock" ];
 	    "clock" = { 
