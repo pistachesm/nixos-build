@@ -68,19 +68,19 @@
           format-alt = "{time} {icon}";
           format-icons = ["" "" "" "" ""];
         };		
-		style = ''
-    	  #battery {
-      		padding: 0 10px;
-    	  }
-    	  #battery.charging {
-            color: #26A65A;
-    	  }
-    	  #battery.warning:not(.charging) {
-      	    color: #FF0000;
-    	  }
-  		'';
 	  }  
 	];
+    style = ''
+      #battery {
+        padding: 0 10px;
+      }
+      #battery.charging {
+        color: #26A65A;
+	  }
+      #battery.warning:not(.charging) {
+        color: #FF0000;
+      }
+    '';
   };
 
 }

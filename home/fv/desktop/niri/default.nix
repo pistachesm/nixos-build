@@ -4,9 +4,12 @@
   
   wayland.windowManager.niri = {
     enable = true;
+	package = null;
+	portalPackage = null;
 	systemd.enable = false;
-  };
 
-  xdg.configFile."niri/config.kdl".source = ./config.kdl;
+	extraConfig = builtins.readFile ./config.kdl;
+
+  };
 
 }
