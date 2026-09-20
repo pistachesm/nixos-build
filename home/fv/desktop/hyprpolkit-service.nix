@@ -1,8 +1,7 @@
 { pkgs, config, ... }:
 
 {
-
-
+  
   services.hyprpolkitagent = {
     enable = true;
   };

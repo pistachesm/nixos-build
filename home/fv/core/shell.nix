@@ -8,23 +8,31 @@
     enableCompletion = true;
     
     shellAliases = {
+	  
+	  # New ls.
       ls = "eza";
       lsa = "eza -a";
       lsl = "eza -al";
       lst = "eza -lTa -L 2";
       lstx = "eza -lTa -L 4";
-      rm = "rm -I";
-	  cpr = "rsync -avh --info=progress2";
+      
+	  # QoL.
+	  rm = "rm -I";
 	  cp = "cp -v";
 	  mv = "mv -v";
       mkdir = "mkdir -pv";
-      diff = "kitty +kitten diff";
-      wtf = "cht.sh";
+      
+	  # Tool's aliases.  
+	  diff = "kitty +kitten diff";
+	  wtf = "cht.sh";
+	  cpr = "rsync -avh --info=progress2";
 
+	  # Nix package manager aliases.
 	  nix-switch = "sudo nixos-rebuild switch --flake /home/fv/Code/nixos-build#Zzy";
 	  nix-test = "sudo nixos-rebuild test --flake /home/fv/Code/nixos-build#Zzy";
 	  nix-check = "nix flake check /home/fv/Code/nixos-build";
 	  nix-update = "nix flake update /home/fv/Code/nixos-build";
+	  buildir = "cd ~/Code/nixos-build";
     
 	};
     

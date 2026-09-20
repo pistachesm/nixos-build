@@ -6,6 +6,7 @@
     ./desktop
     ./packages.nix
     ./programs
+    ./services
   ];
 
   home.username = "fv";

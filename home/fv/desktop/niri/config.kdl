@@ -273,8 +273,7 @@ gestures {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-spawn-at-startup "waybar"
-
+// spawn-at-startup xwayland-satellite
 
 // This are the environment variables chained to the session of niri itself
 
