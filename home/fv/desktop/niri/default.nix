@@ -4,7 +4,7 @@
   
   wayland.windowManager.niri = {
     enable = true;
-	package = null;
+	package = pkgs.niri;
 	portalPackage = null;
 	systemd.enable = false;
 
