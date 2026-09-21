@@ -11,6 +11,7 @@
     ../../modules/nixos/multimedia
     ../../modules/nixos/networking
     ../../modules/nixos/programs
+    ../../modules/nixos/security
     ../../modules/nixos/services
     ../../modules/nixos/users
   ];
