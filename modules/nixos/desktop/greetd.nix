@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   
@@ -8,7 +8,9 @@
     settings = {
       default_session = {
         command = "${pkgs.tuigreet}/bin/tuigreet "
-		+ "--cmd 'uwsm start -F -- /run/current-system/sw/bin/niri --session'";
+          + "--sessions ${config.services.displayManager.sessionData.desktops}/share/wayland-sessions "
+          + "--remember --remember-session "
+          + "--cmd 'uwsm start -F -- /run/current-system/sw/bin/niri --session'";
         
 		user = "greeter";	
       };
