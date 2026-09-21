@@ -17,6 +17,7 @@
 	unzip
 	unrar
 	playerctl
+	duf
     
 	# Libraries.
 	libsForQt5.qt5ct

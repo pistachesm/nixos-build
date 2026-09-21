@@ -9,12 +9,12 @@
       {
 		layer = "top";
 		position = "top";
-		height = 30;
+		height = 34;
 		output = [ "eDP-1" ];
 		modules-left = [ "cpu" "memory" "temperature" ];
 	    "cpu" = {
 		  interval = 10;
-          format = " {icon} {}%";
+          format = " {icon} {usage}%";
           format-icons = " ";
 		  max-length = 10;
 		};
@@ -26,7 +26,6 @@
  	      tooltip-format = "RAM: {percentage}%\nUsada: {used:0.1f}GB\nLibre: {avail:0.1f}GB";
 		};
 		modules-center = [
-		  "niri/workspaces"
 		  "niri/window"
 		];
 		modules-right = [ "network" "pulseaudio" "backlight" "battery" "clock" ];

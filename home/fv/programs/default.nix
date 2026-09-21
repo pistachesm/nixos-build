@@ -14,7 +14,8 @@
     ./git.nix
     ./nix-index.nix
     ./fastfetch.nix
-    ./waybar.nix
+    # ./waybar.nix
+	./ashell.nix
 	./ripgrep.nix
     ./editor/nixvim
     ./editor/VScode.nix

@@ -19,5 +19,8 @@
 	  name = "Arimo Nerd Font";
 	  size = 11;
 	};
+    settings = {
+      enable_audio_bell = false;
+	};
   };
 }
