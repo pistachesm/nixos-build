@@ -14,7 +14,7 @@
       font = "monospace 10";
       height = 100;
       icons = true;
-      ignore-timeout = true;
+      ignore-timeout = false;
       layer = "top";
       margin = 10;
       markup = true;
