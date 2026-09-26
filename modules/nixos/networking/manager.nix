@@ -2,11 +2,13 @@
 
 {
 
-  networking.networkmanager = {
-    enable = true;
-	dns = "systemd-resolved";
-	wifi.backend = "iwd";
-    wireless = {
+  networking = {
+    networkmanager = {
+      enable = true;
+      dns = "systemd-resolved";
+	  wifi.backend = "iwd";
+	};
+ 	wireless = {
 	  iwd = {
 	    enable = true;
 		settings = {
