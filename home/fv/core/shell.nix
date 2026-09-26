@@ -16,6 +16,10 @@
       lst = "eza -lTa -L 2";
       lstx = "eza -lTa -L 4";
       
+	  # Utilities.
+	  box = "cd /tmp";
+	  jctl = "sudo journalctl -p 3 -xb";
+
 	  # QoL.
 	  rm = "rm -I";
 	  cp = "cp -v";
