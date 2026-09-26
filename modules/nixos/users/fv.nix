@@ -13,11 +13,8 @@
     ];
   };
 
-  security.sudo.extraRules = [
-    {
-      users = [ "fv" ];
-      #commands = [
-      #];
-    }
-  ];
+  security = {
+    sudo.wheelNeedsPassword = true;
+  };
+
 }

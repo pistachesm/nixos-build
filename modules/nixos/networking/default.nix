@@ -3,8 +3,7 @@
 {
   imports = [
     ./manager.nix
-	./wifi.nix
-	# ./dns.nix
+	./dns.nix
     ./firewall.nix
   ];
 }

@@ -6,25 +6,27 @@
 	enable = true;
 	systemd.enable = true;
 	settings = {
+	  appearance = {
+        bar = "transparent";
+	  };
+	  animations = true;
 	  modules = {
         center = [
-          "Window Title"
+          "WindowTitle"
         ];
         left = [
-          "Workspaces"
+          "SystemInfo"
         ];
         right = [
           "SystemInfo"
           [
-            "Clock"
+            "Temp"
             "Privacy"
             "Settings"
           ]
         ];
       };
-      workspaces = {
-        visibilityMode = "MonitorSpecific";
-      };
+      system_info.indicators = [ "Cpu" "Memory" "Temperature" ];	
 	};
   };
 

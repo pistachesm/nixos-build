@@ -1,7 +1,25 @@
-{ ... }:
+{ lib, ... }:
 
 {
-  
-  networking.networkmanager.enable = true;
+
+  networking.networkmanager = {
+    enable = true;
+	dns = "systemd-resolved";
+	wifi.backend = "iwd";
+    wireless = {
+	  iwd = {
+	    enable = true;
+		settings = {
+          General = {
+            AddressRandomization = "network";
+			EnableNetworkConfiguration = false;
+		  };
+	 	  Settings = {
+            AutoConnect = true; 
+		  };
+		};
+	  };
+	};
+  };
 
 }
