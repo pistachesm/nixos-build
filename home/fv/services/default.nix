@@ -3,7 +3,6 @@
 {
 
   imports = [
-    ./dunst.nix
     ./systemd
   ];
 

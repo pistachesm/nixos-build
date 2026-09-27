@@ -23,7 +23,23 @@
         foreground = "#eceff1";
         timeout = 10;
       };
-    waylandDisplay = "wayland-1";
+	};
+  };
+
+  systemd.user.services.dunst = {
+	Unit = {
+	  Description = lib.mkDefault "Notification client";
+	  PartOf = [ "wayland-session@niri.target" ];
+	  After = [ "wayland-session@niri.target" ];
+	};
+	Install = {
+	  WantedBy = [ "wayland-session@niri.target" ];
+	};
+	Service = {
+	  Type = "simple";
+      ExecStart = lib.mkDefault "${pkgs.dunst}/bin/dunst";
+	  Slice = "background.slice";
+	  Restart = "on-failure";
 	};
   };
 
