@@ -23,7 +23,10 @@
 	libsForQt5.qt5ct
 	libnotify
 
-    # Messaging CLient.
+    # Messaging client.
 	ferdium
+    
+    # CLipboard tools.
+	wl-clipboard
   ];
 }

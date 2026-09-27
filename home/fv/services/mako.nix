@@ -2,24 +2,32 @@
 
 {
   
-  services.mako = {
+  services.dunst = {
 	enable = true;
-    settings = {
-      actions = true;
-      anchor = "top-right";
-      background-color = "#000000";
-      border-color = "#FFFFFF";
-      border-radius = 0;
-      default-timeout = 0;
-      font = "monospace 10";
-      height = 100;
-      icons = true;
-      ignore-timeout = true;
-      layer = "top";
-      margin = 10;
-      markup = true;
-      width = 300;
+	iconTheme = {
+	  package = pkgs.adwaita-icon-theme;
+	  name = "Adwaita";
 	};
-  };
+    settings = {
+      global = {
+        width = "(200,300)";
+        height = "(0,150)";
+        offset = "(30,50)";
+        origin = "top-right";
+        transparency = 10;
+        frame_color = "#eceff1";
+		font = "Droid Sans 9";
+      };
+      urgency_normal = {
+        background = "#37474f";
+        foreground = "#eceff1";
+        timeout = 10;
+      };
+      custom-rule = lib.hm.dag.entryAfter [ "global" ] {
+        appname = "custom-app";  
+		timeout = 1;
+	  };
+    waylandDisplay = "wayland-1";
+	};
 
 }

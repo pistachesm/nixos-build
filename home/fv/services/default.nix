@@ -4,6 +4,7 @@
 
   imports = [
     ./mako.nix
+    ./systemd
   ];
 
 }
