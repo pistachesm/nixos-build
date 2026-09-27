@@ -3,6 +3,6 @@
 {
   imports = [
     ./codex-desktop.nix
-    ./nix-ld.nix
+    ./starsector.nix
   ];
 }
