@@ -25,8 +25,5 @@
 
     # Messaging client.
 	ferdium
-    
-    # CLipboard tools.
-	wl-clipboard
   ];
 }

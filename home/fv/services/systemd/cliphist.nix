@@ -27,7 +27,7 @@
 	  Type = "simple";
 	  ExecStart = lib.mkDefault "${pkgs.wl-clipboard}/bin/wl-paste --watch ${pkgs.cliphist}/bin/cliphist store";
       Restart = "on-failure";
-	  Slice = "background.slice";
+	  Slice = "app-graphical.slice";
 	};
   };
 

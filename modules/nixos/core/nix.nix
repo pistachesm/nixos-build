@@ -11,6 +11,7 @@
 		"corefonts"
         "unrar"
 		"obsidian"
+		"starsector"
 	  ];
     };
 

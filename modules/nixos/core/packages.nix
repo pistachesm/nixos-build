@@ -22,5 +22,6 @@
 	vulkan-tools
 	mesa-demos
 	util-linux
+	starsector
   ];
 }

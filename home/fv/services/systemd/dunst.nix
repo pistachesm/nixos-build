@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   
@@ -36,9 +36,8 @@
 	  WantedBy = [ "wayland-session@niri.target" ];
 	};
 	Service = {
-	  Type = "simple";
       ExecStart = lib.mkDefault "${pkgs.dunst}/bin/dunst";
-	  Slice = "background.slice";
+	  Slice = "background-graphical.slice";
 	  Restart = "on-failure";
 	};
   };

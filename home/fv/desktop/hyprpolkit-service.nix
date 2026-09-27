@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, lib, ... }:
 
 {
   
@@ -6,22 +6,23 @@
     enable = true;
   };
 
-#  systemd.user.services.hyprpolkitagent = {
-#	  Unit = {
-#        Description = "Hyprland PolicyKit Agent";
-#        Wants = [ "graphical-session.target" ];
-#  	    After = [ "graphical-session.target" ];
-#	  };
-#	  Install = {
-#	    WantedBy = [ "graphical-session.target" ];
-#	  };
-#      Service = {
-#        Type = "simple";
-#        ExecStart = "${pkgs.hyprpolkitagent}/libexec/hyprpolkitagent";
-#        Restart = "on-failure";
-#		RestartSec = 1;
-#		TimeoutStopSec = 10;
-#	  };
-#    };
+  systemd.user.services.hyprpolkitagent = {
+	  Unit = {
+        Description = lib.mkDefault "Hyprland PolicyKit Agent";
+        Wants = [ "wayland-session@niri.target" ];
+  	    After = [ "wayland-session@niri.target" ];
+	  };
+	  Install = {
+	    WantedBy = [ "wayland-session@niri.target" ];
+	  };
+      Service = {
+        Type = "simple";
+        ExecStart = lib.mkDefault "${pkgs.hyprpolkitagent}/bin/hyprpolkitagent";
+        Restart = "on-failure";
+		RestartSec = 1;
+		TimeoutStopSec = 10;
+		Slice = "app-graphical.slice";
+	  };
+    };
 
 }
