@@ -37,7 +37,7 @@
 	  nix-check = "nix flake check /home/fv/Code/nixos-build";
 	  nix-update = "nix flake update /home/fv/Code/nixos-build";
 	  buildir = "cd ~/Code/nixos-build";
-    
+	  
 	};
     
     bashrcExtra = ''
