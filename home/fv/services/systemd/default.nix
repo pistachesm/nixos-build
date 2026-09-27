@@ -3,8 +3,7 @@
 {
 
   imports = [
-    ./dunst.nix
-    ./systemd
+	./cliphist.nix
   ];
 
 }

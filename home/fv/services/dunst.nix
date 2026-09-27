@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   
@@ -23,11 +23,8 @@
         foreground = "#eceff1";
         timeout = 10;
       };
-      custom-rule = lib.hm.dag.entryAfter [ "global" ] {
-        appname = "custom-app";  
-		timeout = 1;
-	  };
     waylandDisplay = "wayland-1";
 	};
+  };
 
 }
