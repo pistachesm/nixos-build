@@ -22,6 +22,7 @@
 	# Libraries.
 	libsForQt5.qt5ct
 	libnotify
+	imagemagick
 
     # Messaging client.
 	ferdium
