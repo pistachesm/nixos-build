@@ -37,16 +37,17 @@
     }
 
     local hl = vim.api.nvim_set_hl
+    local terminal_bg = "NONE"
 
     -- Base
     hl(0, "Normal", {
       fg = c.fg,
-      bg = c.bg,
+      bg = terminal_bg,
     })
 
     hl(0, "NormalNC", {
       fg = c.fg,
-      bg = c.bg,
+      bg = terminal_bg,
     })
 
     hl(0, "NormalFloat", {
@@ -55,7 +56,7 @@
     })
 
     hl(0, "FloatBorder", {
-      fg = c.magenta,
+      fg = c.blue,
       bg = c.bg,
     })
 
@@ -98,19 +99,19 @@
     })
 
     hl(0, "Statement", {
-      fg = c.magenta,
+      fg = c.blue,
     })
 
     hl(0, "Keyword", {
-      fg = c.magenta,
+      fg = c.blue,
     })
 
     hl(0, "Conditional", {
-      fg = c.magenta,
+      fg = c.blue,
     })
 
     hl(0, "Repeat", {
-      fg = c.magenta,
+      fg = c.blue,
     })
 
     hl(0, "Operator", {
@@ -172,16 +173,16 @@
 
     hl(0, "StatusLine", {
       fg = c.brightWhite,
-      bg = c.magenta,
+      bg = c.blue,
     })
 
     hl(0, "StatusLineNC", {
       fg = c.brightBlack,
-      bg = c.bg,
+      bg = terminal_bg,
     })
 
     hl(0, "WinSeparator", {
-      fg = c.magenta,
+      fg = c.blue,
     })
 
     -- Diagnostics
@@ -227,11 +228,11 @@
     })
 
     hl(0, "@keyword", {
-      fg = c.magenta,
+      fg = c.blue,
     })
 
     hl(0, "@keyword.function", {
-      fg = c.magenta,
+      fg = c.blue,
     })
 
     hl(0, "@type", {

@@ -17,4 +17,6 @@
     jack.enable = true;
   };
 
+  services.pulseaudio.enable = false;
+
 }

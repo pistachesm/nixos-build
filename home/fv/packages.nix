@@ -18,6 +18,7 @@
 	unrar
 	playerctl
 	duf
+	wlr-randr
     
 	# Libraries.
 	libsForQt5.qt5ct

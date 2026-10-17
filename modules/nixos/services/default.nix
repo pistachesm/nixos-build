@@ -5,5 +5,7 @@
     ./fwupd.nix
     ./libinput.nix
     ./udisks.nix
+	./blueman.nix
+	./ananicy.nix
   ];
 }

@@ -7,5 +7,6 @@
     ./kernel.nix
     ./modules.nix
 	./power.nix
+	./bluetooth.nix
   ];
 }
