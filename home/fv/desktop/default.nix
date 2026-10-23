@@ -7,7 +7,7 @@
 	./hyprpolkit-service.nix
 	./wallpaper.nix
 	./theming.nix
-	./portal.nix
+	# ./portal.nix
 	./lockscreen.nix
   ];
 }

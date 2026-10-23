@@ -22,6 +22,7 @@
     ./zoxide.nix
 	./fd.nix
 	./obsidian.nix
+	./pcmanfm.nix
   ];
 
 }
