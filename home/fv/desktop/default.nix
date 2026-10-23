@@ -6,5 +6,7 @@
 	./wayland.nix
 	./hyprpolkit-service.nix
 	./wallpaper.nix
+	./theming.nix
+	./portal.nix
   ];
 }

@@ -22,5 +22,7 @@
 	vulkan-tools
 	mesa-demos
 	util-linux
+	libdrm
+	amdgpu_top
   ];
 }
