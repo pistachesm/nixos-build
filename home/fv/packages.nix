@@ -24,6 +24,10 @@
 	libsForQt5.qt5ct
 	libnotify
 	imagemagick
+	libva
+	libpciaccess
+	rocmPackages.amdsmi
+	amd-blis
 
     # Messaging client.
 	ferdium

@@ -1,8 +1,10 @@
+
 { palette, ... }:
 
 {
   programs.nixvim.extraConfigLua = ''
     vim.o.termguicolors = true
+    vim.o.background = "dark"
 
     vim.cmd("highlight clear")
 
@@ -10,9 +12,11 @@
       vim.cmd("syntax reset")
     end
 
+    -- Paleta compartida
     local c = {
       fg = "${palette.foreground}",
       bg = "${palette.background}",
+      url = "${palette.url}",
 
       black = "${palette.black}",
       red = "${palette.red}",
@@ -37,17 +41,17 @@
     }
 
     local hl = vim.api.nvim_set_hl
-    local terminal_bg = "NONE"
+    local transparent = "NONE"
 
     -- Base
     hl(0, "Normal", {
       fg = c.fg,
-      bg = terminal_bg,
+      bg = transparent,
     })
 
     hl(0, "NormalNC", {
       fg = c.fg,
-      bg = terminal_bg,
+      bg = transparent,
     })
 
     hl(0, "NormalFloat", {
@@ -60,7 +64,16 @@
       bg = c.bg,
     })
 
-    -- Syntax
+    hl(0, "EndOfBuffer", {
+      fg = c.bg,
+      bg = transparent,
+    })
+
+    hl(0, "SignColumn", {
+      bg = transparent,
+    })
+
+    -- Sintaxis
     hl(0, "Comment", {
       fg = c.brightBlack,
       italic = true,
@@ -130,7 +143,16 @@
       fg = c.brightMagenta,
     })
 
-    -- UI
+    hl(0, "Directory", {
+      fg = c.blue,
+    })
+
+    hl(0, "Underlined", {
+      fg = c.url,
+      underline = true,
+    })
+
+    -- Interfaz
     hl(0, "LineNr", {
       fg = c.brightBlack,
     })
@@ -138,6 +160,10 @@
     hl(0, "CursorLineNr", {
       fg = c.yellow,
       bold = true,
+    })
+
+    hl(0, "CursorLine", {
+      bg = c.bg,
     })
 
     hl(0, "Visual", {
@@ -172,20 +198,20 @@
     })
 
     hl(0, "StatusLine", {
-      fg = c.brightWhite,
-      bg = c.blue,
+      fg = c.fg,
+      bg = c.selectionBg,
     })
 
     hl(0, "StatusLineNC", {
       fg = c.brightBlack,
-      bg = terminal_bg,
+      bg = transparent,
     })
 
     hl(0, "WinSeparator", {
-      fg = c.blue,
+      fg = c.selectionBg,
     })
 
-    -- Diagnostics
+    -- Diagnosticos LSP
     hl(0, "DiagnosticError", {
       fg = c.red,
     })
@@ -200,6 +226,25 @@
 
     hl(0, "DiagnosticHint", {
       fg = c.green,
+    })
+
+    hl(0, "DiagnosticOk", {
+      fg = c.green,
+    })
+
+    hl(0, "DiagnosticUnderlineError", {
+      undercurl = true,
+      sp = c.red,
+    })
+
+    hl(0, "DiagnosticUnderlineWarn", {
+      undercurl = true,
+      sp = c.yellow,
+    })
+
+    hl(0, "DiagnosticUnderlineInfo", {
+      undercurl = true,
+      sp = c.cyan,
     })
 
     -- Treesitter
@@ -264,3 +309,4 @@
     })
   '';
 }
+

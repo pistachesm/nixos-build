@@ -1,31 +1,41 @@
+
 { ... }:
 
 {
+  # Paleta compartida para Home Manager.
+  # Utilizada por Kitty, Nixvim y Lualine.
+
   _module.args.palette = {
-    foreground = "#dbeafe";
-    background = "#06101f";
+    # Base
+    foreground = "#f3dde1";
+    background = "#1b1013";
 
-    selectionForeground = "#dbeafe";
-    selectionBackground = "#17446b";
+    # Seleccion
+    selectionForeground = "#f3dde1";
+    selectionBackground = "#0d5370";
 
-    url = "#7dd3fc";
+    # Enlaces
+    url = "#7fd1f4";
 
-    black = "#06101f";
-    red = "#f87171";
-    green = "#86efac";
-    yellow = "#fde68a";
-    blue = "#60a5fa";
-    magenta = "#38bdf8";
-    cyan = "#67e8f9";
-    white = "#dbeafe";
+    # Colores ANSI
+    black = "#1b1013";
+    red = "#e96a83";
+    green = "#7af487";
+    yellow = "#f0c674";
+    blue = "#62bfe7";
+    magenta = "#d68cbd";
+    cyan = "#7fd1f4";
+    white = "#f3dde1";
 
-    brightBlack = "#64748b";
-    brightRed = "#fca5a5";
-    brightGreen = "#bbf7d0";
-    brightYellow = "#fef3c7";
-    brightBlue = "#93c5fd";
-    brightMagenta = "#7dd3fc";
-    brightCyan = "#a5f3fc";
-    brightWhite = "#f8fafc";
+    # Colores ANSI brillantes
+    brightBlack = "#937d86";
+    brightRed = "#ff96a8";
+    brightGreen = "#a3ffae";
+    brightYellow = "#ffe2a0";
+    brightBlue = "#94dafa";
+    brightMagenta = "#f3b4df";
+    brightCyan = "#b8eafa";
+    brightWhite = "#fff7f8";
   };
 }
+

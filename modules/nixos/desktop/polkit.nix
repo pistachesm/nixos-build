@@ -12,4 +12,6 @@
 	'';
   };
 
+  security.pam.services.hyprlock = {};
+
 }

@@ -8,5 +8,6 @@
 	./wallpaper.nix
 	./theming.nix
 	./portal.nix
+	./lockscreen.nix
   ];
 }
