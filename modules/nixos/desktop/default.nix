@@ -7,5 +7,6 @@
     #./portal.nix
     ./polkit.nix
     ./uwsm.nix
+	./dconf.nix
   ];
 }

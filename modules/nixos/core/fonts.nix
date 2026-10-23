@@ -37,6 +37,8 @@
 	  nerd-fonts.droid-sans-mono
 	  nerd-fonts.jetbrains-mono
 	  nerd-fonts.arimo
-    ];
+      mplus-outline-fonts.githubRelease
+      dina-font
+	];
   };
 }
