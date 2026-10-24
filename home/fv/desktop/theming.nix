@@ -6,6 +6,12 @@ let
     colorVariants = [ "dark" ];
     sizeVariants = [ "standard" ];
   };
+  
+  kvantumTheme = pkgs.catppuccin-kvantum.override {
+    accent = "teal";
+	variant = "mocha";
+  };
+
 in
 {
   gtk = {
@@ -21,6 +27,12 @@ in
 	  name = "Kora";
 	  package = pkgs.kora-icon-theme;
 	};
+  
+    cursorTheme = {
+      name = "Adwaita";
+      package = pkgs.bibata-cursors;
+      size = 18;
+	};
   };
 
   qt = {
@@ -32,14 +44,19 @@ in
     kvantum = {
       enable = true;
 
-      themes = [
-        (pkgs.catppuccin-kvantum.override {
-          accent = "teal";
-          variant = "mocha";
-        })
-      ];
-
+      themes = [ kvantumTheme ];
+	
       settings.General.theme = "catppuccin-mocha-teal";
-    };
+    
+	};
   };
+
+  home.pointerCursor = {
+	enable = true;
+	gtk.enable = true;
+	package = pkgs.bibata-cursors;
+	name = "Bibata-Modern-Ice";
+	size = 18;
+  };
+
 }

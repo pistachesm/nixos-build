@@ -16,7 +16,7 @@
         origin = "top-right";
         transparency = 10;
         frame_color = "#eceff1";
-		font = "Droid Sans 9";
+		font = "Droid Sans 12";
       };
       urgency_normal = {
         background = "#37474f";

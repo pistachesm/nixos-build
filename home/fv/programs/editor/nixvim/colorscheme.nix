@@ -20,19 +20,19 @@
 
       black = "${palette.black}",
       red = "${palette.red}",
-      green = "${palette.green}",
+      green = "${palette.magenta}",
       yellow = "${palette.yellow}",
       blue = "${palette.blue}",
-      magenta = "${palette.magenta}",
+      magenta = "${palette.green}",
       cyan = "${palette.cyan}",
       white = "${palette.white}",
 
       brightBlack = "${palette.brightBlack}",
       brightRed = "${palette.brightRed}",
-      brightGreen = "${palette.brightGreen}",
+      brightGreen = "${palette.brightMagenta}",
       brightYellow = "${palette.brightYellow}",
       brightBlue = "${palette.brightBlue}",
-      brightMagenta = "${palette.brightMagenta}",
+      brightMagenta = "${palette.brightGreen}",
       brightCyan = "${palette.brightCyan}",
       brightWhite = "${palette.brightWhite}",
 

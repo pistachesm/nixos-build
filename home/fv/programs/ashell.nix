@@ -8,6 +8,7 @@
 	settings = {
 	  appearance = {
         bar = "transparent";
+		scale_factor = 1.2;
 	  };
 	  animations = true;
 	  modules = {

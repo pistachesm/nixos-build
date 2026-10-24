@@ -17,7 +17,7 @@
     };
 	font = {
 	  name = "Arimo Nerd Font";
-	  size = 11;
+	  size = 14;
 	};
     settings = {
       enable_audio_bell = false;
