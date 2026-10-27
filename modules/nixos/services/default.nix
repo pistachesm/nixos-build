@@ -7,5 +7,6 @@
     ./udisks.nix
 	./blueman.nix
 	./ananicy.nix
+	./sunshine.nix
   ];
 }

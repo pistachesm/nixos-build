@@ -17,7 +17,7 @@
       lstx = "eza -lTa -L 4";
       
 	  # Utilities.
-	  box = "cd /tmp";
+	  tmp = ''cd "$(mktemp -d /tmp/temporal.XXXXXX)"'';
 	  jctl = "sudo journalctl -p 3 -xb";
 
 	  # QoL.
