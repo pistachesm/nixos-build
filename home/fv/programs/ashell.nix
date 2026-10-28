@@ -8,7 +8,7 @@
 	settings = {
 	  appearance = {
         bar = "transparent";
-		scale_factor = 1.2;
+		scale_factor = 2;
 	  };
 	  animations = true;
 	  modules = {
@@ -16,18 +16,20 @@
           "WindowTitle"
         ];
         left = [
-          "SystemInfo"
+          "workspaces"
         ];
         right = [
-          "SystemInfo"
           [
-            "Temp"
+            "Tray"
+			"Temp"
+			"MediaPlayer"
             "Privacy"
+			"Battery"
             "Settings"
           ]
         ];
       };
-      system_info.indicators = [ "Cpu" "Memory" "Temperature" ];	
+	
 	};
   };
 

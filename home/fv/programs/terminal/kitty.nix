@@ -21,6 +21,13 @@
 	};
     settings = {
       enable_audio_bell = false;
+	  background_opacity = "0.6";
+	  background_blur = "1";
+	  dynamic_background_opacity = true;
+	  copy_on_select = true;
+	  allow_hyperlinks = true;
+	  
+
 	  foreground = palette.foreground;
       background = palette.background;
 
