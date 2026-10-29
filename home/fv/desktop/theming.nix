@@ -16,8 +16,6 @@ in
 {
   gtk = {
     enable = true;
-	colorScheme = "dark";
-    
 	theme = {
       name = "Colloid-Teal-Dark";
 	  package = colloid;
@@ -33,6 +31,7 @@ in
       package = pkgs.bibata-cursors;
       size = 18;
 	};
+	gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
   };
 
   qt = {
@@ -58,5 +57,7 @@ in
 	name = "Bibata-Modern-Ice";
 	size = 18;
   };
+
+  dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
 
 }

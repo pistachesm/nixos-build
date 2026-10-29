@@ -1,4 +1,4 @@
-{ config, pkgs, palette, ... }:
+{ lib, pkgs, palette, ... }:
 
 {
 
@@ -15,12 +15,12 @@
 		layer = "overlay";
 	  };
 	  colors = {
-	    background = "palette.background";
-		text = "palette.white";
-		match = "palette.yellow";
-		selection = "palette.blue";
-		selection-text = "palette.brightWhite";
-		border = "palette.magenta";
+	    background = "${lib.removePrefix "#" palette.background}ff";
+		text = "${lib.removePrefix "#" palette.white}ff";
+		match = "${lib.removePrefix "#" palette.yellow}ff";
+		selection = "${lib.removePrefix "#" palette.blue}ff";
+		selection-text = "${lib.removePrefix "#" palette.brightWhite}ff";
+		border = "${lib.removePrefix "#" palette.magenta}ff";
 	  };
 	  border = {
 		width = 3;

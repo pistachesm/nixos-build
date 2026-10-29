@@ -11,6 +11,7 @@
       "audio"
       "input"
 	  "git"
+	  "polkituser"
     ];
   };
 
