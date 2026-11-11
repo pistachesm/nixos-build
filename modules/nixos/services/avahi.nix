@@ -8,12 +8,12 @@ services.avahi = {
   wideArea = false;
 
   settings = {
-    server.allow-interfaces = [ "wlp2s0" ];
+    server.allow-interfaces = [ "wlan0" ];
     publish.disable-publishing = true;
     reflector.enable-reflector = false;
   };
 };
 
-networking.firewall.interfaces."wlp2s0".allowedUDPPorts = [ 5353 ];
+networking.firewall.interfaces."wlan0".allowedUDPPorts = [ 5353 ];
 
 }

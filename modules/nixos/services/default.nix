@@ -8,5 +8,6 @@
 	./blueman.nix
 	./ananicy.nix
 	./sunshine.nix
+	./avahi.nix
   ];
 }

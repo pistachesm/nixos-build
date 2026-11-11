@@ -13,6 +13,4 @@
     };
   };
 
-  services.avahi.enable = false;
-
 }
