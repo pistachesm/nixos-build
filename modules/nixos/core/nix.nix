@@ -12,6 +12,7 @@
         "unrar"
 		"obsidian"
 		"starsector"
+		"steam-1.0.0.87"
 	  ];
     };
 
