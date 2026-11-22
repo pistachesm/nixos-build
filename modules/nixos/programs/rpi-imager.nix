@@ -37,7 +37,6 @@ in
   environment.systemPackages = [
     imager
     imagerPolicy
-	rpi-imager
   ];
 }
 

@@ -24,5 +24,6 @@
 	util-linux
 	libdrm
 	amdgpu_top
+	rpi-imager
   ];
 }
