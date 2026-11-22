@@ -5,7 +5,7 @@
     ./niri
 	./wayland.nix
 	#./hyprpolkit-service.nix
-	./gnome-polkit
+	./gnome-polkit.nix
 	./wallpaper.nix
 	./theming.nix
 	# ./portal.nix
