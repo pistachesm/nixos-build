@@ -13,6 +13,7 @@
 	  KITTY_ENABLE_WAYLAND = "1";
 	  KITTY_SHELL_INTEGRATION = "enabled";
 	  TERMINAL = "kitty";
+	  QT_QPA_PLATFORM= "wayland"; 
 	};
 
   };
