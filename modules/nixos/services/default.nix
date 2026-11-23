@@ -9,5 +9,6 @@
 	./ananicy.nix
 	./sunshine.nix
 	./avahi.nix
+	./tailscale.nix
   ];
 }
