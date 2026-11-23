@@ -6,5 +6,6 @@
     ./starsector.nix
 	./steam.nix
 	./rpi-imager.nix
+	./zoom.nix
   ];
 }
